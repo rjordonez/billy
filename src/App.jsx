@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FinancialDashboard from './components/FinancialDashboard';
@@ -52,7 +53,7 @@ function App() {
             <div className="testimonial-body">
               <p>We saved bookkeeping for later. Later cost us time, money, and stress.</p>
               <p>We're building this to make Day 1 setup simple and painless.</p>
-              <a href="#" className="testimonial-cta">See more</a>
+              <Link to="/story" className="testimonial-cta">See more</Link>
             </div>
           </div>
         </div>
@@ -91,32 +92,36 @@ function App() {
           </div>
         </div>
       </section>
+      </div>
 
       <section id="solution" className="section solution-section">
-        <div className="solution-container">
-          <h3 className="solution-title">What we do?</h3>
-          <h2 className="solution-headline">We help founders set up accounting & bookkeeping correctly from the start, so you stay compliant, organized, and stress-free as you grow.</h2>
+        <div className="solution-wrapper">
+          <div className="solution-container">
+            <h3 className="solution-title">What we do?</h3>
+            <h2 className="solution-headline">We help founders set up accounting & bookkeeping correctly from the start, so you stay compliant, organized, and stress-free as you grow.</h2>
 
-          <div className="benefits-section">
-            <h3 className="benefits-title">Core Benefits</h3>
-            <div className="benefits-grid">
-              <div className="benefit-box">
-                <p>No messy cleanup later</p>
-              </div>
-              <div className="benefit-box">
-                <p>Avoid fines & penalties</p>
-              </div>
-              <div className="benefit-box">
-                <p>Clean books from Day 1</p>
-              </div>
-              <div className="benefit-box">
-                <p>Founder peace of mind</p>
+            <div className="benefits-section">
+              <h3 className="benefits-title">Core Benefits</h3>
+              <div className="benefits-grid">
+                <div className="benefit-box">
+                  <p>No messy cleanup later</p>
+                </div>
+                <div className="benefit-box">
+                  <p>Avoid fines & penalties</p>
+                </div>
+                <div className="benefit-box">
+                  <p>Clean books from Day 1</p>
+                </div>
+                <div className="benefit-box">
+                  <p>Founder peace of mind</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <div className="app">
       <section id="how-it-works" className="section how-it-works-section">
         <div className="how-it-works-container">
           <h2 className="how-it-works-title">How It Works</h2>
@@ -177,9 +182,9 @@ function App() {
           </div>
         </div>
       </section>
+      </div>
 
       <Footer />
-      </div>
     </>
   );
 }

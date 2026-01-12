@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #1a1a1a;
+  --background: #FFFFFF;
+  --surface: #f9fafb;
+  --warm-neutral: #f5f5f5;
+  --cool-neutral: #e5e5e5;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.story-page {
+  min-height: 100vh;
+  background-color: var(--background);
+  font-family: 'Inter', sans-serif;
+  padding: 4rem 2rem;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.story-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin-bottom: 3rem;
+  transition: opacity 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.back-button:hover {
+  background-color: var(--warm-neutral);
+  opacity: 1;
+}
+
+.story-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.story-image {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--cool-neutral) 0%, #e8e8e8 100%);
+  border: 1px solid var(--cool-neutral);
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.story-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.story-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.story-section {
+  line-height: 1.8;
+}
+
+.story-section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.story-section p {
+  font-size: 1.125rem;
+  color: var(--primary);
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}
+
+.story-intro {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.story-emphasis {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.story-quote {
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--cool-neutral);
+  font-style: italic;
+  color: #444444;
+  margin: 1rem 0;
+}
+
+.story-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.story-section ul li {
+  font-size: 1.125rem;
+  color: var(--primary);
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.story-section ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.story-closing {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .story-page {
+    padding: 2rem 1.5rem;
+  }
+
+  .story-title {
+    font-size: 2rem;
+  }
+
+  .story-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .story-section p,
+  .story-section ul li {
+    font-size: 1rem;
+  }
+
+  .story-intro,
+  .story-closing {
+    font-size: 1.125rem;
+  }
+}
