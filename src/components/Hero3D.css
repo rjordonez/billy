@@ -1,0 +1,22 @@
+.hero-3d-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 1024px) {
+  .hero-3d-container {
+    width: 100%;
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-3d-container {
+    display: none;
+  }
+}
