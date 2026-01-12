@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import FinancialDashboard from './components/FinancialDashboard';
 import './App.css';
 
 function App() {
@@ -10,208 +11,144 @@ function App() {
       <div className="app">
         <section id="home" className="section home-section">
         <div className="hero-content">
-          <h1>Accounting Made Simple for Founders</h1>
-          <p className="subtitle">Track expenses, validate invoices, and stay compliant—automatically.</p>
+          <h1>Bookkeeping, set up right from Day 1.</h1>
+          <p className="subtitle">For first-time founders who don't know where to start, and don't want fines or cleanup later.</p>
 
           <div className="hero-cta">
             <button className="cta-primary" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
-              Request Early Access
+              Become a Partner
             </button>
-            <a href="#features" className="cta-secondary">See how it works →</a>
           </div>
 
-          <div className="hero-trust">
-            <div className="trust-stars">
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-              <span className="star">★</span>
-            </div>
-            <p className="trust-text">Trusted by 500+ founders</p>
-          </div>
-        </div>
-      </section>
+          <p className="hero-audience">Early-stage • First-time founders • US startups</p>
 
-      <section id="features" className="section features-section">
-        <div className="bento-grid">
-          <div className="bento-card">
-            <div className="card-content">
-              <h3>Know if an invoice is valid</h3>
-              <p>Instantly see if an invoice is missing a receipt or payment</p>
-              <a href="#" className="learn-more">Learn more →</a>
-            </div>
-            <div className="card-visual">
-              <div className="mockup invoice-mockup"></div>
-            </div>
-          </div>
-
-          <div className="bento-card">
-            <div className="card-content">
-              <h3>Get reimbursed faster</h3>
-              <p>Submit expenses in one click with automatic approval</p>
-              <a href="#" className="learn-more">Learn more →</a>
-            </div>
-            <div className="card-visual">
-              <div className="mockup reimburse-mockup"></div>
-            </div>
-          </div>
-
-          <div className="bento-card">
-            <div className="card-content">
-              <h3>Save founder time</h3>
-              <p>No accountant needed—expenses are tracked automatically</p>
-              <a href="#" className="learn-more">Learn more →</a>
-            </div>
-            <div className="card-visual">
-              <div className="mockup time-mockup"></div>
-            </div>
-          </div>
-
-          <div className="bento-card">
-            <div className="card-content">
-              <h3>Auto-categorize expenses</h3>
-              <p>We automatically label expenses and learn from patterns</p>
-              <a href="#" className="learn-more">Learn more →</a>
-            </div>
-            <div className="card-visual">
-              <div className="mockup category-mockup"></div>
-            </div>
-          </div>
-
-          <div className="bento-card">
-            <div className="card-content">
-              <h3>Understand & control spending</h3>
-              <p>Simple budget overview—see what you're overspending on</p>
-              <a href="#" className="learn-more">Learn more →</a>
-            </div>
-            <div className="card-visual">
-              <div className="mockup spending-mockup"></div>
-            </div>
-          </div>
-
-          <div className="bento-card">
-            <div className="card-content">
-              <h3>No more copy-paste</h3>
-              <p>Upload once, done forever—data flows everywhere automatically</p>
-              <a href="#" className="learn-more">Learn more →</a>
-            </div>
-            <div className="card-visual">
-              <div className="mockup automation-mockup"></div>
+          <div className="trusted-by">
+            <p className="trusted-label">Trusted by</p>
+            <div className="logo-container">
+              <img src="/logos/11393250.png" alt="Techstars logo" className="partner-logo techstars-logo" />
+              <img src="/logos/USC-Logo.png" alt="USC Logo" className="partner-logo" />
             </div>
           </div>
         </div>
       </section>
 
-      <section id="timeline" className="section timeline-section">
-        <div className="timeline-container">
-          <div className="timeline-header">
-            <p className="timeline-eyebrow">Switching doesn't have to be painful</p>
-            <h2>Here's what 30 days with Billy looks like.</h2>
-          </div>
+      <section id="problems" className="section problems-section">
+        <div className="problems-container">
+          <h2 className="problems-headline">Managing accounting is hard.</h2>
+          <p className="problems-subheadline">Most founders struggle with:</p>
 
-          <div className="timeline-bar-wrapper">
-            <div className="timeline-bar"></div>
-            <div className="timeline-markers">
-              <div className="timeline-marker">
-                <div className="marker-badge">Day 1</div>
-                <div className="marker-dot"></div>
-              </div>
-              <div className="timeline-marker">
-                <div className="marker-badge">Day 5</div>
-                <div className="marker-dot"></div>
-              </div>
-              <div className="timeline-marker">
-                <div className="marker-badge">Day 30</div>
-                <div className="marker-dot highlight"></div>
-              </div>
+          <div className="problems-list">
+            <div className="problem-card">
+              <div className="problem-icon">✕</div>
+              <p className="problem-text">I don't know what counts as a business expense</p>
+            </div>
+
+            <div className="problem-card">
+              <div className="problem-icon">✕</div>
+              <p className="problem-text">I paid out of pocket, is that bad?</p>
+            </div>
+
+            <div className="problem-card">
+              <div className="problem-icon">✕</div>
+              <p className="problem-text">I have receipts everywhere… email, photos, PDFs</p>
+            </div>
+
+            <div className="problem-card">
+              <div className="problem-icon">✕</div>
+              <p className="problem-text">I'll fix bookkeeping later (but I know that's risky)</p>
+            </div>
+
+            <div className="problem-card">
+              <div className="problem-icon">✕</div>
+              <p className="problem-text">I'm scared of fines, penalties, or screwing up taxes</p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="timeline-cards">
-            <div className="timeline-card">
-              <h3>Just getting started</h3>
-              <ul className="timeline-list">
-                <li>
-                  <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Paying with your own card
-                </li>
-                <li>
-                  <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Receipts everywhere
-                </li>
-                <li>
-                  <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  No idea what's "valid"
-                </li>
-              </ul>
+      <section id="solution" className="section solution-section">
+        <div className="solution-container">
+          <h3 className="solution-title">What we do?</h3>
+          <h2 className="solution-headline">We help founders set up accounting & bookkeeping correctly from the start, so you stay compliant, organized, and stress-free as you grow.</h2>
+
+          <div className="benefits-section">
+            <h3 className="benefits-title">Core Benefits</h3>
+            <div className="benefits-grid">
+              <div className="benefit-box">
+                <p>No messy cleanup later</p>
+              </div>
+              <div className="benefit-box">
+                <p>Avoid fines & penalties</p>
+              </div>
+              <div className="benefit-box">
+                <p>Clean books from Day 1</p>
+              </div>
+              <div className="benefit-box">
+                <p>Founder peace of mind</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" className="section how-it-works-section">
+        <div className="how-it-works-container">
+          <h2 className="how-it-works-title">How It Works</h2>
+
+          <div className="features-list">
+            {/* Feature 1 - Text Left, Image Right */}
+            <div className="feature-row">
+              <div className="feature-text">
+                <span className="step-label">Step 1</span>
+                <h3 className="feature-heading">Set up & capture, in clicks</h3>
+                <p className="feature-description">No accounting knowledge needed. Set up your books in minutes. Capture expenses instantly via photo, email, or upload—everything goes straight into your system.</p>
+              </div>
+              <div className="feature-image">
+                <div className="image-placeholder">
+                  <span className="demo-label">Receipt photo → transaction</span>
+                </div>
+              </div>
             </div>
 
-            <div className="timeline-card">
-              <h3>Getting control</h3>
-              <ul className="timeline-list">
-                <li>
-                  <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Expenses auto-captured
-                </li>
-                <li>
-                  <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Receipts checked for you
-                </li>
-                <li>
-                  <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Less manual work
-                </li>
-              </ul>
+            {/* Feature 2 - Image Left, Text Right */}
+            <div className="feature-row">
+              <div className="feature-image">
+                <div className="image-placeholder">
+                  <span className="demo-label">Transaction list with matched/missing receipt states</span>
+                </div>
+              </div>
+              <div className="feature-text">
+                <span className="step-label">Step 2</span>
+                <h3 className="feature-heading">Auto-reconcile & stay compliant</h3>
+                <p className="feature-description">We catch what founders miss. Receipts automatically match to transactions. Missing or mismatched items are flagged before they become problems.</p>
+              </div>
             </div>
 
-            <div className="timeline-card">
-              <h3>Fully set</h3>
-              <ul className="timeline-list">
-                <li>
-                  <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  All spend in one place
-                </li>
-                <li>
-                  <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Fast reimbursements
-                </li>
-                <li>
-                  <svg className="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Clear view of your budget
-                </li>
-              </ul>
+            {/* Feature 3 - Text Left, Image Right */}
+            <div className="feature-row">
+              <div className="feature-text">
+                <span className="step-label">Step 3</span>
+                <h3 className="feature-heading">Know where your money goes</h3>
+                <p className="feature-description">Built for startups, not accountants. Spending is structured correctly from Day 1. Track budget and burn so you always know your financial position.</p>
+              </div>
+              <div className="feature-image">
+                <div className="image-placeholder">
+                  <span className="demo-label">Spend-by-category + burn overview dashboard</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <section id="contact" className="section contact-section">
-        <div className="contact-content">
-          <h2>Get Started</h2>
-          <p>Ready to simplify your accounting?</p>
-          <form className="contact-form">
-            <input type="email" placeholder="Enter your email" />
-            <button type="submit">Request Early Access</button>
-          </form>
+        <div className="contact-container">
+          <h2 className="contact-title">Help us build this with founders.</h2>
+          <div className="contact-content">
+            <p className="benefits-intro">Get: Early access, Founder pricing, Direct input on the product</p>
+            <button className="cta-button">Become a Design Partner</button>
+            <p className="cta-disclaimer">Limited spots • No obligation</p>
+          </div>
         </div>
       </section>
 
