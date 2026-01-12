@@ -32,6 +32,30 @@ function App() {
         </div>
       </section>
 
+      <section id="testimonial" className="section testimonial-section">
+        <div className="testimonial-container">
+          <div className="testimonial-card">
+            <div className="testimonial-profile">
+              <div className="profile-photo"></div>
+              <div className="profile-info">
+                <p className="profile-name">Rex Ordonez</p>
+                <p className="profile-title">Co-founder @Native</p>
+              </div>
+            </div>
+
+            <div className="testimonial-headline">
+              <h2>We're building the product we wish we had</h2>
+            </div>
+
+            <div className="testimonial-body">
+              <p>We saved bookkeeping for later. Later cost us time, money, and stress.</p>
+              <p>We're building this to make Day 1 setup simple and painless.</p>
+              <a href="#" className="testimonial-cta">See more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="problems" className="section problems-section">
         <div className="problems-container">
           <h2 className="problems-headline">Managing accounting is hard.</h2>

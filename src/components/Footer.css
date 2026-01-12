@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 .footer {
   background-color: #ffffff;
   color: #1a1a1a;
   padding: 6rem 0 4rem;
   border-top: 1px solid #e5e5e5;
+  font-family: 'Inter', sans-serif;
 }
 
 .footer-container {
