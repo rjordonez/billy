@@ -11,6 +11,14 @@ function App() {
       <div className="app">
         <section id="home" className="section home-section">
         <div className="hero-content">
+          <div className="trusted-by">
+            <p className="trusted-label">Backed by</p>
+            <div className="logo-container">
+              <img src="/logos/11393250.png" alt="Techstars logo" className="partner-logo techstars-logo" />
+              <img src="/logos/USC-Logo.png" alt="USC Logo" className="partner-logo" />
+            </div>
+          </div>
+
           <h1>Bookkeeping, set up right from Day 1.</h1>
           <p className="subtitle">For first-time founders who don't know where to start, and don't want fines or cleanup later.</p>
 
@@ -21,14 +29,6 @@ function App() {
           </div>
 
           <p className="hero-audience">Early-stage • First-time founders • US startups</p>
-
-          <div className="trusted-by">
-            <p className="trusted-label">Trusted by</p>
-            <div className="logo-container">
-              <img src="/logos/11393250.png" alt="Techstars logo" className="partner-logo techstars-logo" />
-              <img src="/logos/USC-Logo.png" alt="USC Logo" className="partner-logo" />
-            </div>
-          </div>
         </div>
       </section>
 

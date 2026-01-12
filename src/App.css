@@ -33,12 +33,12 @@ body {
 
 /* Hero Section */
 .home-section {
-  min-height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
   padding-top: 8rem;
+  padding-bottom: 4rem;
 }
 
 .hero-content {
@@ -122,11 +122,12 @@ body {
 }
 
 .trusted-by {
-  margin-top: 3rem;
+  margin-bottom: 3rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .trusted-label {
