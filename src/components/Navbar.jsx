@@ -18,9 +18,9 @@ const Navbar = () => {
 
         <div className="nav-links">
           <button onClick={() => scrollToSection('home')} className="nav-link">Home</button>
-          <button onClick={() => scrollToSection('validate')} className="nav-link">Features</button>
-          <button onClick={() => scrollToSection('control')} className="nav-link">Spending</button>
-          <button onClick={() => scrollToSection('automation')} className="nav-link">Automation</button>
+          <button onClick={() => scrollToSection('features')} className="nav-link">Features</button>
+          <button onClick={() => scrollToSection('timeline')} className="nav-link">Timeline</button>
+          <button onClick={() => scrollToSection('contact')} className="nav-link">Pricing</button>
         </div>
 
         <div className="nav-contact">
