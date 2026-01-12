@@ -36,7 +36,9 @@ function App() {
         <div className="testimonial-container">
           <div className="testimonial-card">
             <div className="testimonial-profile">
-              <div className="profile-photo"></div>
+              <div className="profile-photo">
+                <img src="/test-pic.jpeg" alt="Rex Ordonez" />
+              </div>
               <div className="profile-info">
                 <p className="profile-name">Rex Ordonez</p>
                 <p className="profile-title">Co-founder @Native</p>
