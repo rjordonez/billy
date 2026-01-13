@@ -82,7 +82,7 @@ function App() {
               </div>
               <div className="timeline-content">
                 <div className="timeline-image">
-                  <img src="/testimonial-pictures/front-page.png" alt="Product Over Everything" />
+                  <img src="/testimonial-pictures/front-page.jpeg" alt="Product Over Everything" />
                 </div>
                 <h3 className="timeline-heading">Product Over Everything</h3>
                 <p className="timeline-description">After raising funding, we focused on building and finding PMF. Bookkeeping felt secondary, so we handled it ourselves without really understanding the rules.</p>
