@@ -15,7 +15,7 @@ function Story() {
 
         <div className="story-header">
           <div className="story-image">
-            <img src="/test-pic.jpeg" alt="Rex Ordonez" />
+            <img src="/testimonial-pictures/inside-page.jpeg" alt="Rex Ordonez" />
           </div>
           <h1 className="story-title">Our story</h1>
         </div>

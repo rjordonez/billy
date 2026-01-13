@@ -14,14 +14,6 @@ function App() {
       <div className="app">
         <section id="home" className="section home-section">
         <div className="hero-content">
-          <div className="trusted-by">
-            <p className="trusted-label">Backed by</p>
-            <div className="logo-container">
-              <img src="/logos/11393250.png" alt="Techstars logo" className="partner-logo techstars-logo" />
-              <img src="/logos/USC-Logo.png" alt="USC Logo" className="partner-logo" />
-            </div>
-          </div>
-
           <h1>Bookkeeping, Done Right From Day One</h1>
           <p className="subtitle">Built by founders, for founders.<br />Save thousands in mistakes and wasted time.</p>
 
@@ -210,7 +202,7 @@ function App() {
           <div className="testimonial-card">
             <div className="testimonial-profile">
               <div className="profile-photo">
-                <img src="/test-pic.jpeg" alt="Rex Ordonez" />
+                <img src="/testimonial-pictures/front-page.png" alt="Rex Ordonez" />
               </div>
               <div className="profile-info">
                 <p className="profile-name">Rex Ordonez</p>
