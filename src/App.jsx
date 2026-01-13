@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -6,6 +6,8 @@ import FinancialDashboard from './components/FinancialDashboard';
 import './App.css';
 
 function App() {
+  const [activeEvent, setActiveEvent] = useState(0);
+
   return (
     <>
       <Navbar />
@@ -20,8 +22,8 @@ function App() {
             </div>
           </div>
 
-          <h1>Bookkeeping, set up right from Day 1.</h1>
-          <p className="subtitle">For first-time founders who don't know where to start, and don't want fines or cleanup later.</p>
+          <h1>Bookkeeping, Done Right From Day One</h1>
+          <p className="subtitle">Built by founders, for founders.<br />Save thousands in mistakes and wasted time.</p>
 
           <div className="hero-cta">
             <button className="cta-primary" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
@@ -29,7 +31,177 @@ function App() {
             </button>
           </div>
 
-          <p className="hero-audience">Early-stage • First-time founders • US startups</p>
+          <p className="hero-audience">Built for early-stage, first-time US founders</p>
+        </div>
+      </section>
+
+      <section id="problems" className="section problems-section">
+        <div className="problems-container">
+          <h2 className="problems-headline">Founders Easily Overlook Bookkeeping, Until It Catches Up</h2>
+
+          <div className="problems-list">
+            <div className="problem-card">
+              <div className="problem-icon">✕</div>
+              <p className="problem-text">I don't know what counts as a business expense</p>
+            </div>
+
+            <div className="problem-card">
+              <div className="problem-icon">✕</div>
+              <p className="problem-text">I paid out of pocket, is that bad?</p>
+            </div>
+
+            <div className="problem-card">
+              <div className="problem-icon">✕</div>
+              <p className="problem-text">I have receipts everywhere… email, photos, PDFs</p>
+            </div>
+
+            <div className="problem-card">
+              <div className="problem-icon">✕</div>
+              <p className="problem-text">I'll fix bookkeeping later (but I know that's risky)</p>
+            </div>
+
+            <div className="problem-card">
+              <div className="problem-icon">✕</div>
+              <p className="problem-text">I'm scared of fines, penalties, or screwing up taxes</p>
+            </div>
+          </div>
+
+          <p className="problems-transition">You're not alone. We felt this exact pain.</p>
+        </div>
+      </section>
+      </div>
+
+      <div className="app">
+      <section id="our-story" className="section our-story-section">
+        <div className="our-story-container">
+          <h2 className="our-story-title">Our Story</h2>
+          <p className="our-story-subtitle">We're Jessie and Rex. We built our first company the hard way—<br />so you can build yours the right way.</p>
+
+          <div className="timeline">
+            <div className="timeline-line"></div>
+
+            <div
+              className={`timeline-event ${activeEvent === 0 ? 'active' : ''}`}
+              onClick={() => setActiveEvent(0)}
+            >
+              <div className="timeline-marker">
+                <div className="marker-dot"></div>
+                <div className="marker-date">Year 1</div>
+              </div>
+              <div className="timeline-content">
+                <div className="timeline-image">
+                  <div className="image-placeholder">
+                    <span className="demo-label">Raising funding</span>
+                  </div>
+                </div>
+                <h3 className="timeline-heading">Product Over Everything</h3>
+                <p className="timeline-description">After raising funding, we focused on building and finding PMF. Bookkeeping felt secondary, so we handled it ourselves without really understanding the rules.</p>
+              </div>
+            </div>
+
+            <div
+              className={`timeline-event ${activeEvent === 1 ? 'active' : ''}`}
+              onClick={() => setActiveEvent(1)}
+            >
+              <div className="timeline-marker">
+                <div className="marker-dot"></div>
+                <div className="marker-date">Tax Season</div>
+              </div>
+              <div className="timeline-content">
+                <div className="timeline-image">
+                  <div className="image-placeholder">
+                    <span className="demo-label">Tax deadline stress</span>
+                  </div>
+                </div>
+                <h3 className="timeline-heading">When It Caught Up</h3>
+                <p className="timeline-description">
+                  Our books weren't set up right. Deadlines slipped, payroll taxes went wrong, and penalties followed. By the time we noticed, fixing it was costly.<br />
+                  <br />
+                  Cleanup meant weeks of stress and thousands in fees—rebuilding records and second-guessing deductions instead of growing the business.
+                </p>
+              </div>
+            </div>
+
+            <div
+              className={`timeline-event ${activeEvent === 2 ? 'active' : ''}`}
+              onClick={() => setActiveEvent(2)}
+            >
+              <div className="timeline-marker">
+                <div className="marker-dot"></div>
+                <div className="marker-date">Today</div>
+              </div>
+              <div className="timeline-content">
+                <div className="timeline-image">
+                  <div className="image-placeholder">
+                    <span className="demo-label">Building Billy</span>
+                  </div>
+                </div>
+                <h3 className="timeline-heading">Building Billy</h3>
+                <p className="timeline-description">
+                  We're building Billy to help founders get bookkeeping right from Day One, no accounting knowledge, no expensive cleanup later.<br />
+                  <br />
+                  It's the product we wish we had: set up correctly, capture expenses automatically, stay compliant, and avoid fines, stress, and late-night cleanup.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" className="section how-it-works-section">
+        <div className="how-it-works-container">
+          <h2 className="how-it-works-title">How It Works</h2>
+          <p className="how-it-works-subtitle">We help founders set up accounting & bookkeeping correctly from the start,<br />so you stay compliant, organized, and stress-free as you grow.</p>
+
+          <div className="product-grid">
+            <div className="product-card">
+              <div className="product-header">
+                <h3 className="product-title">Start clean</h3>
+                <p className="product-description">Set up compliant accounting in minutes, no expertise needed.</p>
+              </div>
+              <div className="product-visual">
+                <div className="image-placeholder">
+                  <span className="demo-label">Setup wizard interface</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="product-card">
+              <div className="product-header">
+                <h3 className="product-title">Never lose receipts</h3>
+                <p className="product-description">Snap, email, or upload—everything captured and stored.</p>
+              </div>
+              <div className="product-visual">
+                <div className="image-placeholder">
+                  <span className="demo-label">Receipt photo → transaction</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="product-card">
+              <div className="product-header">
+                <h3 className="product-title">Catch issues early</h3>
+                <p className="product-description">Auto-match receipts and flag problems early.</p>
+              </div>
+              <div className="product-visual">
+                <div className="image-placeholder">
+                  <span className="demo-label">Matched transactions view</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="product-card">
+              <div className="product-header">
+                <h3 className="product-title">Track your burn</h3>
+                <p className="product-description">Real-time spending and runway tracking.</p>
+              </div>
+              <div className="product-visual">
+                <div className="image-placeholder">
+                  <span className="demo-label">Budget & burn dashboard</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -59,126 +231,16 @@ function App() {
         </div>
       </section>
 
-      <section id="problems" className="section problems-section">
-        <div className="problems-container">
-          <h2 className="problems-headline">Managing accounting is hard.</h2>
-          <p className="problems-subheadline">Most founders struggle with:</p>
-
-          <div className="problems-list">
-            <div className="problem-card">
-              <div className="problem-icon">✕</div>
-              <p className="problem-text">I don't know what counts as a business expense</p>
-            </div>
-
-            <div className="problem-card">
-              <div className="problem-icon">✕</div>
-              <p className="problem-text">I paid out of pocket, is that bad?</p>
-            </div>
-
-            <div className="problem-card">
-              <div className="problem-icon">✕</div>
-              <p className="problem-text">I have receipts everywhere… email, photos, PDFs</p>
-            </div>
-
-            <div className="problem-card">
-              <div className="problem-icon">✕</div>
-              <p className="problem-text">I'll fix bookkeeping later (but I know that's risky)</p>
-            </div>
-
-            <div className="problem-card">
-              <div className="problem-icon">✕</div>
-              <p className="problem-text">I'm scared of fines, penalties, or screwing up taxes</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      </div>
-
-      <section id="solution" className="section solution-section">
-        <div className="solution-wrapper">
-          <div className="solution-container">
-            <h3 className="solution-title">What we do?</h3>
-            <h2 className="solution-headline">We help founders set up accounting & bookkeeping correctly from the start, so you stay compliant, organized, and stress-free as you grow.</h2>
-
-            <div className="benefits-section">
-              <h3 className="benefits-title">Core Benefits</h3>
-              <div className="benefits-grid">
-                <div className="benefit-box">
-                  <p>No messy cleanup later</p>
-                </div>
-                <div className="benefit-box">
-                  <p>Avoid fines & penalties</p>
-                </div>
-                <div className="benefit-box">
-                  <p>Clean books from Day 1</p>
-                </div>
-                <div className="benefit-box">
-                  <p>Founder peace of mind</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="app">
-      <section id="how-it-works" className="section how-it-works-section">
-        <div className="how-it-works-container">
-          <h2 className="how-it-works-title">How It Works</h2>
-
-          <div className="features-list">
-            {/* Feature 1 - Text Left, Image Right */}
-            <div className="feature-row">
-              <div className="feature-text">
-                <span className="step-label">Step 1</span>
-                <h3 className="feature-heading">Set up & capture, in clicks</h3>
-                <p className="feature-description">No accounting knowledge needed. Set up your books in minutes. Capture expenses instantly via photo, email, or upload—everything goes straight into your system.</p>
-              </div>
-              <div className="feature-image">
-                <div className="image-placeholder">
-                  <span className="demo-label">Receipt photo → transaction</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Feature 2 - Image Left, Text Right */}
-            <div className="feature-row">
-              <div className="feature-image">
-                <div className="image-placeholder">
-                  <span className="demo-label">Transaction list with matched/missing receipt states</span>
-                </div>
-              </div>
-              <div className="feature-text">
-                <span className="step-label">Step 2</span>
-                <h3 className="feature-heading">Auto-reconcile & stay compliant</h3>
-                <p className="feature-description">We catch what founders miss. Receipts automatically match to transactions. Missing or mismatched items are flagged before they become problems.</p>
-              </div>
-            </div>
-
-            {/* Feature 3 - Text Left, Image Right */}
-            <div className="feature-row">
-              <div className="feature-text">
-                <span className="step-label">Step 3</span>
-                <h3 className="feature-heading">Know where your money goes</h3>
-                <p className="feature-description">Built for startups, not accountants. Spending is structured correctly from Day 1. Track budget and burn so you always know your financial position.</p>
-              </div>
-              <div className="feature-image">
-                <div className="image-placeholder">
-                  <span className="demo-label">Spend-by-category + burn overview dashboard</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="contact" className="section contact-section">
         <div className="contact-container">
-          <h2 className="contact-title">Help us build this with founders.</h2>
-          <div className="contact-content">
-            <p className="benefits-intro">Get: Early access, Founder pricing, Direct input on the product</p>
-            <button className="cta-button">Become a Design Partner</button>
-            <p className="cta-disclaimer">Limited spots • No obligation</p>
+          <h2 className="contact-title">Get It Right From Day One</h2>
+          <div className="contact-form">
+            <input
+              type="email"
+              placeholder="What's your work email?"
+              className="email-input"
+            />
+            <button className="cta-button-primary">Founder Signup</button>
           </div>
         </div>
       </section>
