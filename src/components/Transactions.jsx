@@ -158,7 +158,7 @@ function Transactions() {
       )}
 
       <div className="main-layout">
-        {/* Right Side - Transactions */}
+        {/* Transactions */}
         <div className="transactions-container">
         <div className="filter-bar">
           <div className="filter-dropdown">
@@ -313,62 +313,115 @@ function Transactions() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  );
-}
 
-export default Transactions;
-          <div className="filter-dropdown">
-            <span>All</span>
-            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
-              <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
+        {/* Cash Flow Chart */}
+        <div className="cash-flow-chart">
+          <div className="chart-header">
+            <h2 className="chart-title">Cash Flow</h2>
+            <div className="chart-dropdown">
+              <span>Last 12 Months</span>
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              </svg>
+            </div>
           </div>
 
-          <div className="search-input">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <circle cx="7" cy="7" r="5" stroke="currentColor" strokeWidth="1.5"/>
-              <path d="M11 11L14 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-            </svg>
-            <input type="text" placeholder="Search or filter" />
-          </div>
+          <div className="chart-container">
+            <div className="chart-area">
+              <svg className="line-chart" viewBox="0 0 600 300" preserveAspectRatio="xMidYMid meet">
+                {/* Grid lines */}
+                <line x1="60" y1="50" x2="600" y2="50" stroke="#f3f4f6" strokeWidth="1" />
+                <line x1="60" y1="100" x2="600" y2="100" stroke="#f3f4f6" strokeWidth="1" />
+                <line x1="60" y1="150" x2="600" y2="150" stroke="#f3f4f6" strokeWidth="1" />
+                <line x1="60" y1="200" x2="600" y2="200" stroke="#f3f4f6" strokeWidth="1" />
+                <line x1="60" y1="250" x2="600" y2="250" stroke="#f3f4f6" strokeWidth="1" />
 
-          <button className="add-filter-btn">
-            <span>+</span> Add filter
-          </button>
-        </div>
+                {/* Y-axis labels */}
+                <text x="50" y="55" textAnchor="end" fill="#6b7280" fontSize="12">$0</text>
+                <text x="50" y="105" textAnchor="end" fill="#6b7280" fontSize="12">-$10K</text>
+                <text x="50" y="155" textAnchor="end" fill="#6b7280" fontSize="12">-$20K</text>
+                <text x="50" y="205" textAnchor="end" fill="#6b7280" fontSize="12">-$30K</text>
+                <text x="50" y="255" textAnchor="end" fill="#6b7280" fontSize="12">-$40K</text>
 
-        <div className="transactions-table">
-          <div className="table-header">
-            <div className="header-cell">Merchant</div>
-            <div className="header-cell">Transaction date</div>
-            <div className="header-cell">Transaction type</div>
-          </div>
+                {/* Area fill gradient */}
+                <defs>
+                  <linearGradient id="cashFlowGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.2" />
+                    <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
+                  </linearGradient>
+                </defs>
 
-          <div className="table-body">
-            {transactions.map((transaction, index) => (
-              <div key={index} className="table-row">
-                <div className="merchant-cell">
-                  <div className="merchant-logo">
-                    {transaction.logo}
-                  </div>
-                  <div className="merchant-info">
-                    <div className="merchant-name">{transaction.merchant}</div>
-                    <div className="merchant-category">{transaction.category}</div>
-                  </div>
-                </div>
+                {/* Area fill */}
+                <path
+                  d="M 60 50 L 105 65 L 150 80 L 195 100 L 240 120 L 285 140 L 330 160 L 375 180 L 420 200 L 465 220 L 510 235 L 555 245 L 555 280 L 60 280 Z"
+                  fill="url(#cashFlowGradient)"
+                />
 
-                <div className="date-cell">
-                  {transaction.date}
-                </div>
+                {/* Line */}
+                <path
+                  d="M 60 50 L 105 65 L 150 80 L 195 100 L 240 120 L 285 140 L 330 160 L 375 180 L 420 200 L 465 220 L 510 235 L 555 245"
+                  stroke="#3b82f6"
+                  strokeWidth="2"
+                  fill="none"
+                />
 
-                <div className="type-cell">
-                  <div className="transaction-type">{transaction.type}</div>
-                  <div className="card-number">•••• {transaction.cardLast4}</div>
+                {/* Data points */}
+                <circle cx="60" cy="50" r="3" fill="#3b82f6" />
+                <circle cx="105" cy="65" r="3" fill="#3b82f6" />
+                <circle cx="150" cy="80" r="3" fill="#3b82f6" />
+                <circle cx="195" cy="100" r="3" fill="#3b82f6" />
+                <circle cx="240" cy="120" r="3" fill="#3b82f6" />
+                <circle cx="285" cy="140" r="3" fill="#3b82f6" />
+                <circle cx="330" cy="160" r="3" fill="#3b82f6" />
+                <circle cx="375" cy="180" r="3" fill="#3b82f6" />
+                <circle cx="420" cy="200" r="3" fill="#3b82f6" />
+                <circle cx="465" cy="220" r="3" fill="#3b82f6" />
+                <circle cx="510" cy="235" r="3" fill="#3b82f6" />
+                <circle cx="555" cy="245" r="3" fill="#3b82f6" />
+
+                {/* X-axis labels */}
+                <text x="60" y="295" textAnchor="middle" fill="#6b7280" fontSize="11">Jan 2025</text>
+                <text x="150" y="295" textAnchor="middle" fill="#6b7280" fontSize="11">Mar 2025</text>
+                <text x="240" y="295" textAnchor="middle" fill="#6b7280" fontSize="11">May 2025</text>
+                <text x="330" y="295" textAnchor="middle" fill="#6b7280" fontSize="11">Jul 2025</text>
+                <text x="420" y="295" textAnchor="middle" fill="#6b7280" fontSize="11">Sep 2025</text>
+                <text x="510" y="295" textAnchor="middle" fill="#6b7280" fontSize="11">Nov 2025</text>
+              </svg>
+            </div>
+
+            <div className="chart-legend">
+              <div className="legend-item">
+                <div className="legend-dot outline-gray"></div>
+                <div className="legend-content">
+                  <div className="legend-label gray">Cash as on 01 Jan 2025</div>
+                  <div className="legend-value">$-304.00</div>
                 </div>
               </div>
-            ))}
+
+              <div className="legend-item">
+                <div className="legend-dot green"></div>
+                <div className="legend-content">
+                  <div className="legend-label green">Incoming</div>
+                  <div className="legend-value">$1,157.33 ( + )</div>
+                </div>
+              </div>
+
+              <div className="legend-item">
+                <div className="legend-dot red"></div>
+                <div className="legend-content">
+                  <div className="legend-label red">Outgoing</div>
+                  <div className="legend-value">$71,488.81 ( - )</div>
+                </div>
+              </div>
+
+              <div className="legend-item">
+                <div className="legend-dot blue"></div>
+                <div className="legend-content">
+                  <div className="legend-label blue">Cash as on 12 Jan 2026</div>
+                  <div className="legend-value bold">$-70,635.48 ( = )</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

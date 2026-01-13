@@ -67,7 +67,7 @@ function App() {
       <section id="our-story" className="section our-story-section">
         <div className="our-story-container">
           <h2 className="our-story-title">Our Story</h2>
-          <p className="our-story-subtitle">We're Jessie and Rex. We built our first company the hard way—<br />so you can build yours the right way.</p>
+          <p className="our-story-subtitle">We're Jessie and Rex. We built our first company the hard way<br />so you can build yours the right way.</p>
 
           <div className="timeline">
             <div className="timeline-line"></div>
@@ -82,9 +82,7 @@ function App() {
               </div>
               <div className="timeline-content">
                 <div className="timeline-image">
-                  <div className="image-placeholder">
-                    <span className="demo-label">Raising funding</span>
-                  </div>
+                  <img src="/testimonial-pictures/front-page.png" alt="Product Over Everything" />
                 </div>
                 <h3 className="timeline-heading">Product Over Everything</h3>
                 <p className="timeline-description">After raising funding, we focused on building and finding PMF. Bookkeeping felt secondary, so we handled it ourselves without really understanding the rules.</p>
@@ -101,15 +99,13 @@ function App() {
               </div>
               <div className="timeline-content">
                 <div className="timeline-image">
-                  <div className="image-placeholder">
-                    <span className="demo-label">Tax deadline stress</span>
-                  </div>
+                  <img src="/testimonial-pictures/frustration.png" alt="Tax deadline stress" />
                 </div>
                 <h3 className="timeline-heading">When It Caught Up</h3>
                 <p className="timeline-description">
                   Our books weren't set up right. Deadlines slipped, payroll taxes went wrong, and penalties followed. By the time we noticed, fixing it was costly.<br />
                   <br />
-                  Cleanup meant weeks of stress and thousands in fees—rebuilding records and second-guessing deductions instead of growing the business.
+                  Cleanup meant weeks of stress and thousands in fees rebuilding records and second-guessing deductions instead of growing the business.
                 </p>
               </div>
             </div>
@@ -124,9 +120,7 @@ function App() {
               </div>
               <div className="timeline-content">
                 <div className="timeline-image">
-                  <div className="image-placeholder">
-                    <span className="demo-label">Building Billy</span>
-                  </div>
+                  <img src="/testimonial-pictures/working.png" alt="Building Billy" />
                 </div>
                 <h3 className="timeline-heading">Building Billy</h3>
                 <p className="timeline-description">
@@ -143,7 +137,7 @@ function App() {
       <section id="how-it-works" className="section how-it-works-section">
         <div className="how-it-works-container">
           <h2 className="how-it-works-title">How It Works</h2>
-          <p className="how-it-works-subtitle">We help founders set up accounting & bookkeeping correctly from the start,<br />so you stay compliant, organized, and stress-free as you grow.</p>
+          <p className="how-it-works-subtitle">We help founders set up accounting & bookkeeping correctly from the start, so you stay compliant, organized, and stress-free as you grow.</p>
 
           <div className="product-grid">
             <div className="product-card">
@@ -153,7 +147,7 @@ function App() {
               </div>
               <div className="product-visual">
                 <div className="image-placeholder">
-                  <span className="demo-label">Setup wizard interface</span>
+                  <img src="/demo-images/1.png" alt="Setup wizard interface" />
                 </div>
               </div>
             </div>
@@ -161,11 +155,11 @@ function App() {
             <div className="product-card">
               <div className="product-header">
                 <h3 className="product-title">Never lose receipts</h3>
-                <p className="product-description">Snap, email, or upload—everything captured and stored.</p>
+                <p className="product-description">Snap, email, or upload everything captured and stored.</p>
               </div>
               <div className="product-visual">
                 <div className="image-placeholder">
-                  <span className="demo-label">Receipt photo → transaction</span>
+                  <img src="/demo-images/2.png" alt="Receipt photo to transaction" />
                 </div>
               </div>
             </div>
@@ -177,7 +171,7 @@ function App() {
               </div>
               <div className="product-visual">
                 <div className="image-placeholder">
-                  <span className="demo-label">Matched transactions view</span>
+                  <img src="/demo-images/3.png" alt="Matched transactions view" />
                 </div>
               </div>
             </div>
@@ -189,35 +183,9 @@ function App() {
               </div>
               <div className="product-visual">
                 <div className="image-placeholder">
-                  <span className="demo-label">Budget & burn dashboard</span>
+                  <img src="/demo-images/4.png" alt="Budget and burn dashboard" />
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="testimonial" className="section testimonial-section">
-        <div className="testimonial-container">
-          <div className="testimonial-card">
-            <div className="testimonial-profile">
-              <div className="profile-photo">
-                <img src="/testimonial-pictures/front-page.png" alt="Rex Ordonez" />
-              </div>
-              <div className="profile-info">
-                <p className="profile-name">Rex Ordonez</p>
-                <p className="profile-title">Co-founder @Native</p>
-              </div>
-            </div>
-
-            <div className="testimonial-headline">
-              <h2>We're building the product we wish we had</h2>
-            </div>
-
-            <div className="testimonial-body">
-              <p>We saved bookkeeping for later. Later cost us time, money, and stress.</p>
-              <p>We're building this to make Day 1 setup simple and painless.</p>
-              <Link to="/story" className="testimonial-cta">See more</Link>
             </div>
           </div>
         </div>

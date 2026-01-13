@@ -330,6 +330,84 @@
   color: #333;
 }
 
+.transactions-page.light-mode .budget-tracker {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+.transactions-page.light-mode .budget-title {
+  color: #1a1a1a;
+}
+
+.transactions-page.light-mode .budget-subtitle {
+  color: #666;
+}
+
+.transactions-page.light-mode .view-details-link {
+  color: #666;
+}
+
+.transactions-page.light-mode .view-details-link:hover {
+  color: #1a1a1a;
+}
+
+.transactions-page.light-mode .donut-chart circle:first-child {
+  stroke: #e0e0e0;
+}
+
+.transactions-page.light-mode .ring-amount {
+  color: #1a1a1a;
+}
+
+.transactions-page.light-mode .ring-total {
+  color: #666;
+}
+
+.transactions-page.light-mode .category-name {
+  color: #1a1a1a;
+}
+
+.transactions-page.light-mode .category-amounts {
+  color: #666;
+}
+
+.transactions-page.light-mode .category-bar {
+  background-color: #f0f0f0;
+}
+
+.transactions-page.light-mode .cash-flow-chart {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+.transactions-page.light-mode .chart-title {
+  color: #111827;
+}
+
+.transactions-page.light-mode .chart-dropdown {
+  color: #6b7280;
+}
+
+.transactions-page.light-mode .legend-label.gray {
+  color: #6b7280;
+}
+
+.transactions-page.light-mode .legend-label.green {
+  color: #10b981;
+}
+
+.transactions-page.light-mode .legend-label.red {
+  color: #ef4444;
+}
+
+.transactions-page.light-mode .legend-label.blue {
+  color: #3b82f6;
+}
+
+.transactions-page.light-mode .legend-value {
+  color: #111827;
+}
+
 /* Main Layout - Side by Side */
 .main-layout {
   display: flex;
@@ -495,9 +573,133 @@
   }
 }
 
+/* Cash Flow Chart */
+.cash-flow-chart {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 24px 24px 24px 24px;
+  max-width: 1000px;
+  margin-top: 6rem;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.chart-title {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.chart-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #888;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.chart-dropdown svg {
+  color: #666;
+}
+
+.chart-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: center;
+}
+
+.chart-area {
+  width: 100%;
+}
+
+.line-chart {
+  width: 100%;
+  height: auto;
+}
+
+.chart-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 220px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.legend-dot.outline-gray {
+  border: 2px solid #6b7280;
+  background: transparent;
+}
+
+.legend-dot.green {
+  background-color: #10b981;
+}
+
+.legend-dot.red {
+  background-color: #ef4444;
+}
+
+.legend-dot.blue {
+  background-color: #3b82f6;
+}
+
+.legend-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.legend-label {
+  font-size: 0.875rem;
+}
+
+.legend-label.gray {
+  color: #888;
+}
+
+.legend-label.green {
+  color: #10b981;
+}
+
+.legend-label.red {
+  color: #ef4444;
+}
+
+.legend-label.blue {
+  color: #3b82f6;
+}
+
+.legend-value {
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.legend-value.bold {
+  font-weight: 600;
+}
+
 .transactions-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 /* Filter Bar */
