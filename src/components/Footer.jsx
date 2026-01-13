@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-main">
           <div className="footer-brand">
-            <h3>Billy</h3>
+            <h3>Trilio</h3>
             <p>Accounting made simple for founders</p>
           </div>
 
@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2024 Billy. All rights reserved.</p>
+          <p>&copy; 2024 Trilio. All rights reserved.</p>
           <div className="footer-social">
             <a href="#twitter">Twitter</a>
             <a href="#linkedin">LinkedIn</a>

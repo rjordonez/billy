@@ -60,7 +60,7 @@ function Story() {
           </section>
 
           <section className="story-section">
-            <h2>Why we're building Billy</h2>
+            <h2>Why we're building Trilio</h2>
             <p>We're building the product we wish we had in our first year.</p>
             <p>Something that helps founders:</p>
             <ul>

@@ -120,11 +120,11 @@ function App() {
               </div>
               <div className="timeline-content">
                 <div className="timeline-image">
-                  <img src="/testimonial-pictures/working.png" alt="Building Billy" />
+                  <img src="/testimonial-pictures/working.png" alt="Building Trilio" />
                 </div>
-                <h3 className="timeline-heading">Building Billy</h3>
+                <h3 className="timeline-heading">Building Trilio</h3>
                 <p className="timeline-description">
-                  We're building Billy to help founders get bookkeeping right from Day One, no accounting knowledge, no expensive cleanup later.<br />
+                  We're building Trilio to help founders get bookkeeping right from Day One, no accounting knowledge, no expensive cleanup later.<br />
                   <br />
                   It's the product we wish we had: set up correctly, capture expenses automatically, stay compliant, and avoid fines, stress, and late-night cleanup.
                 </p>
